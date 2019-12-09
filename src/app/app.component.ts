@@ -16,11 +16,17 @@ export class AppComponent {
       posts: Post[] = [
         { name: 'Al',
           lastName: 'zel',
-          numberPhone: '375296306485'
+          numberPhone: '375296306485',
+          id: 1
         }
       ]
 
   updatePosts(post:Post) {
     this.posts.unshift(post)
+  }
+
+  removePost(id: number) {
+        console.log('Id ', id)
+    this.posts = this.posts.filter(p => p.id !== id)
   }
 }

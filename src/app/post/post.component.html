@@ -3,5 +3,7 @@
     <h5 class="card-title">{{post.name}}</h5>
     <h5 class="card-title">{{post.lastName}}</h5>
     <h5 class="card-title">{{post.numberPhone}}</h5>
+    <button type="button" class="btn btn-warning" (click)="deletePost()">&times;</button>
+    <ng-content></ng-content>
   </div>
 </div>

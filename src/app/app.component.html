@@ -5,7 +5,12 @@
 <hr>
 
 <app-post
- *ngFor="let p of posts"
+  *ngFor="let p of posts"
   [post]="p"
- >
+  (onDelete)="removePost($event)"
+>
+  <div #info>
+    <small *ngIf="p.numberPhone.length > 10; else short">Номер слишком длинный</small>
+    <ng-template #short><small>номер короткий</small></ng-template>
+  </div>
 </app-post>

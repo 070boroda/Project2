@@ -13,7 +13,7 @@ export class PostFormComponent implements OnInit {
   name: string =''
   lastName: string = ''
   numberPhone: string = ''
-
+  id: number = 2
   constructor() { }
 
   ngOnInit() {
@@ -25,7 +25,8 @@ export class PostFormComponent implements OnInit {
       const post: Post = {
         name: this.name,
         lastName: this.lastName,
-        numberPhone: this.numberPhone
+        numberPhone: this.numberPhone,
+        id: this.id++
       }
       this.onAdd.emit(post)
       console.log('New Post', post)
